@@ -1,0 +1,80 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="#" class="simple-text">
+            <div class="logo-img">
+                <img src="https://www.webstaurantstore.com/images/products/extra_large/200805/893621.jpg"/>
+            </div>
+            <b>Seating Plan</b>
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+        <li *ngIf="isMobileMenu()">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-dashboard"></i>
+				<p class="hidden-lg hidden-md">Dashboard</p>
+            </a>
+        </li>
+       
+        <li *ngIf="isMobileMenu()">
+           <a>
+                <i class="fa fa-search"></i>
+				<p class="hidden-lg hidden-md">Search</p>
+            </a>
+        </li>
+        <li *ngIf="isMobileMenu()">
+           <a href="">
+               <p>About Us</p>
+            </a>
+        </li>
+        
+        <li *ngIf="isMobileMenu()">
+            <a>
+                <p>Log out</p>
+            </a>
+        </li>
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+        <!--<li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>-->
+        <li routerLinkActive="active">
+            <a routerLink="/dashboard">
+                <i class="pe-7s-home"></i>
+                <p>DashBoard</p>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/new-plan">
+                <i class="pe-7s-study"></i>
+                <p>New Seat Plan</p>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/edit-plan">
+                <i class="pe-7s-scissors"></i>
+                <p>Edit plan</p>
+            </a>    
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/history">
+                <i class="pe-7s-note2"></i>
+                <p> View existing plan</p>
+            </a>    
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/icons">
+                <i class="pe-7s-science"></i>
+                <p> Icons</p>
+            </a>    
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/notifications">
+                <i class="pe-7s-bell"></i>
+                <p>Notifications</p>
+            </a>    
+        </li>
+    </ul>
+</div>
